@@ -1,0 +1,16 @@
+version: "3.9"
+services:
+    db:
+      build: 
+        context: db
+        dockerfile: Dockerfile
+      ports:
+        - "5432:5432"
+
+    cars-api:
+      build: 
+        context: cars_in_a_flask
+        dockerfile: Dockerfile
+      ports:
+        - "8080:8080"        
+    
